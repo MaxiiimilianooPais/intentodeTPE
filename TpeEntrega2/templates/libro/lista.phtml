@@ -1,0 +1,17 @@
+
+
+<div class="container-lista-libros">
+
+    <a href="listarCategorias">Generos</a>
+    <h1>Listado de libros </h1>
+
+    
+    <ul>
+        <?php foreach ($libro as $l): ?>
+            <li>
+                <a href="detallarLibro/<?=$l->id_libro ?>/"><?=$l->titulo ?></a>(Categoria: <?= $l->genero ?>) (id: <?=$l->id_libro ?>)</li>
+            <?php endforeach; ?>
+    </ul>
+
+    <a href="crearLibro">CREAR LIBRO</a>
+</div>

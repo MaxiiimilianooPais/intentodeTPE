@@ -1,0 +1,9 @@
+<div class="container-porCategoria">
+    <h1>Libros del genero: <?= $genero ?></h1>
+    <ul>
+        <?php foreach($libros as $libro) : ?>
+            <li><a href="<?= BASE_URL ?>detallarLibro/<?= $libro->id_libro ?>"><?= $libro->titulo ?></a> - <?= $libro->autor ?> (<?= $libro->precio ?>)</li>
+            <?php endforeach; ?>
+    </ul>
+    <a href="<?= BASE_URL ?>listarCategorias">Volver a Categorias</a>
+</div>

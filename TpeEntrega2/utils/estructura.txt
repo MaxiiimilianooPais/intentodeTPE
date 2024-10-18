@@ -1,0 +1,26 @@
+/libreria
+    /controllers
+        adminController.php
+        publicController.php
+    /models
+        categoriaModel.php
+        libroModel.php
+        usuarioModel.php
+    /views
+        /admin
+            listarItems.phtml
+            editarItem.phtml
+            agregarItem.phtml
+            listarCategorias.phtml
+            editarCategoria.phtml
+            agregarCategoria.phtml
+        /public
+            listadoLibros.phtml
+            detalleLibro.phtml
+            listadoCategorias.phtml
+            librosPorCategoria.phtml
+    /config
+        config.php
+    /assets
+        /images
+    index.php

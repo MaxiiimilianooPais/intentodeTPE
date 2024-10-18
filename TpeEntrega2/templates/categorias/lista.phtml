@@ -1,0 +1,37 @@
+<a href="<?= BASE_URL ?>libros">Volver a libros</a>
+<div class="container-lista-categorias">
+    <h1>Categorias</h1>
+
+    <p>Filtrar por categoría</p>
+    <?php foreach ($generos as $genero): ?>
+        <!-- Botón que redirige al listado de libros por categoría -->
+        <button onclick="window.location.href='<?= BASE_URL ?>librosPorCategoria/<?= urlencode($genero['genero']) ?>'">
+            <?= htmlspecialchars($genero['genero']) ?>
+        </button>
+    <?php endforeach; ?>
+</div>
+
+
+
+<div>
+    <p>Editar o eliminar Categorías</p>
+    <p>Seleccione el género que quiera editar o eliminar:</p>
+    <ul> 
+        <?php foreach ($generos as $genero): ?>
+            <li>
+                <!-- Mostramos el nombre del género -->
+                <?= htmlspecialchars($genero['genero']) ?>
+
+                <!-- Botón para editar -->
+                <button onclick="window.location.href='<?= BASE_URL ?>editarCategoria/<?= urlencode($genero['genero']) ?>'">
+                    Editar
+                </button>
+
+                <!-- Botón para eliminar -->
+                <button onclick="if(confirm('¿Estás seguro de que deseas eliminar esta categoría?')) window.location.href='<?= BASE_URL ?>eliminarCategoria/<?= urlencode($genero['genero']) ?>'">
+                    Eliminar
+                </button>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
